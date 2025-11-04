@@ -18,13 +18,12 @@ class OnboardingPage extends StatelessWidget {
           ),
         ),
         child: SafeArea(
-          child: SingleChildScrollView( // ✅ biar gak overflow di layar kecil
+          child: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 40),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // Skip Button (top right)
                   Align(
                     alignment: Alignment.topRight,
                     child: TextButton(
@@ -41,7 +40,6 @@ class OnboardingPage extends StatelessWidget {
 
                   const SizedBox(height: 40),
 
-                  // Illustration
                   Container(
                     height: 240,
                     width: 240,
@@ -58,7 +56,6 @@ class OnboardingPage extends StatelessWidget {
 
                   const SizedBox(height: 40),
 
-                  // Title
                   const Text(
                     "Selamat Datang di Foodify!",
                     style: TextStyle(
@@ -72,7 +69,6 @@ class OnboardingPage extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  // Description
                   const Text(
                     "Pesan makanan favoritmu dengan cepat, mudah, dan nyaman langsung dari genggamanmu.\nNikmati berbagai pilihan restoran terbaik di sekitarmu.",
                     style: TextStyle(
@@ -85,7 +81,6 @@ class OnboardingPage extends StatelessWidget {
 
                   const SizedBox(height: 50),
 
-                  // Indicator Dots
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -99,7 +94,6 @@ class OnboardingPage extends StatelessWidget {
 
                   const SizedBox(height: 30),
 
-                  // Start Button
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
@@ -133,7 +127,6 @@ class OnboardingPage extends StatelessWidget {
     );
   }
 
-  // Dots builder
   Widget _buildDot(bool isActive) {
     return Container(
       width: isActive ? 24 : 8,

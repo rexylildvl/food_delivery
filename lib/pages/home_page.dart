@@ -208,7 +208,7 @@ class HomePage extends StatelessWidget {
                 itemCount: restaurants.length,
                 separatorBuilder: (_, __) => const SizedBox(height: 12),
                 itemBuilder: (context, index) {
-                  final restaurant = restaurants[index]; // Ganti nama variabel dari 'resto' ke 'restaurant'
+                  final restaurant = restaurants[index];
 
                   return Card(
                     elevation: 2,
@@ -231,7 +231,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       title: Text(
-                        restaurant.name, // Akses properti langsung dari object Restaurant
+                        restaurant.name,
                         style: const TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 16,
@@ -242,7 +242,7 @@ class HomePage extends StatelessWidget {
                         children: [
                           const SizedBox(height: 4),
                           Text(
-                            restaurant.category, // Akses properti langsung
+                            restaurant.category,
                             style: TextStyle(
                               color: Colors.grey[600],
                               fontSize: 14,
@@ -258,7 +258,7 @@ class HomePage extends StatelessWidget {
                               ),
                               const SizedBox(width: 4),
                               Text(
-                                restaurant.rating.toString(), // Akses properti langsung
+                                restaurant.rating.toString(),
                                 style: TextStyle(
                                   color: Colors.grey[700],
                                   fontWeight: FontWeight.w500,
@@ -272,7 +272,7 @@ class HomePage extends StatelessWidget {
                               ),
                               const SizedBox(width: 2),
                               Text(
-                                restaurant.distance, // Akses properti langsung
+                                restaurant.distance,
                                 style: TextStyle(
                                   color: Colors.grey[600],
                                   fontSize: 12,
@@ -297,7 +297,7 @@ class HomePage extends StatelessWidget {
                       ),
                       onTap: () => Get.toNamed(
                         Routes.RESTAURANT_DETAIL,
-                        arguments: restaurant, // Kirim data restoran sebagai arguments
+                        arguments: restaurant,
                       ),
                     ),
                   );

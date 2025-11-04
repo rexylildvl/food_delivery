@@ -57,12 +57,11 @@ class _CheckoutPageState extends State<CheckoutPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded( // Tambahkan Expanded di sini
-              child: SingleChildScrollView( // Bungkus dengan SingleChildScrollView
+            Expanded(
+              child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Item yang dipesan
                     const Text(
                         'Item Dipesan',
                         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
@@ -79,7 +78,6 @@ class _CheckoutPageState extends State<CheckoutPage> {
                     ),
                     const Divider(),
 
-                    // Alamat Pengiriman
                     const Text(
                         'Alamat Pengiriman',
                         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
@@ -96,14 +94,12 @@ class _CheckoutPageState extends State<CheckoutPage> {
                     ),
                     const SizedBox(height: 20),
 
-                    // Opsi Pembayaran
                     const Text(
                         'Opsi Pembayaran',
                         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
                     ),
                     const SizedBox(height: 10),
 
-                    // Daftar metode pembayaran
                     Column(
                       children: _paymentMethods.map((payment) {
                         return Card(
@@ -133,7 +129,6 @@ class _CheckoutPageState extends State<CheckoutPage> {
               ),
             ),
 
-            // Total dan Tombol Pesan - bagian ini tetap di bawah
             Card(
               color: Colors.grey[50],
               child: Padding(

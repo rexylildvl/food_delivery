@@ -20,7 +20,6 @@ class RestaurantDetailPage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            // Header Section dengan Fixed Height
             SizedBox(
               height: 220,
               child: Stack(
@@ -56,7 +55,6 @@ class RestaurantDetailPage extends StatelessWidget {
               ),
             ),
 
-            // Restaurant Info Section
             Container(
               width: double.infinity,
               color: Colors.white,
@@ -140,7 +138,6 @@ class RestaurantDetailPage extends StatelessWidget {
               ),
             ),
 
-            // Menu Section
             Expanded(
               child: Container(
                 color: Colors.grey[50],
@@ -159,7 +156,6 @@ class RestaurantDetailPage extends StatelessWidget {
                       ),
                     ),
 
-                    // Menu Items List
                     Expanded(
                       child: ListView.builder(
                         padding: EdgeInsets.zero,
@@ -171,7 +167,6 @@ class RestaurantDetailPage extends StatelessWidget {
 
                           return Column(
                             children: [
-                              // Category Header
                               if (isNewCategory)
                                 Container(
                                   width: double.infinity,
@@ -186,7 +181,6 @@ class RestaurantDetailPage extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                              // Menu Item
                               Container(
                                 color: Colors.white,
                                 child: ListTile(
@@ -249,11 +243,9 @@ class RestaurantDetailPage extends StatelessWidget {
                                     ),
                                   ),
                                   onTap: () {
-                                    // Aksi ketika item menu di-tap
                                   },
                                 ),
                               ),
-                              // Divider
                               if (index < menuItems.length - 1)
                                 const Divider(height: 1, indent: 16),
                             ],
@@ -262,7 +254,6 @@ class RestaurantDetailPage extends StatelessWidget {
                       ),
                     ),
 
-                    // Order Button - Fixed di bottom
                     Container(
                       color: Colors.white,
                       padding: const EdgeInsets.all(16),
